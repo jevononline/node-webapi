@@ -34,7 +34,7 @@ citySchema.statics.cityGuess = function(name){
 citySchema.statics.cityHot = function (){
 	return new Promise(async (resolve, reject) => {
 		try{
-			const city = await this.findOne();
+      const city = await this.findOne();
 			resolve(city.data.hotCities)
 		}catch(err){
 			reject({

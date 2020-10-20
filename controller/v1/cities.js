@@ -13,7 +13,7 @@ class CityHandle extends AddressComponent{
 		this.pois = this.pois.bind(this);
 	}
 	async getCity(req, res, next){
-		const type = req.query.type;
+    const type = req.query.type;
 		let cityInfo;
 		try{
 			switch (type){
@@ -33,7 +33,7 @@ class CityHandle extends AddressComponent{
 						message: '参数错误',
 					})
 					return
-			}
+      }
 			res.send(cityInfo);
 		}catch(err){
 			res.send({
